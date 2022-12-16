@@ -1,0 +1,21 @@
+name: 'gpt-analyse'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: gpt analyse step
+        uses: jcPerlego/gpt-action@v1
+        id: gpt-analyse
+        with:
+          who-to-greet: 'Joey Leeds'
+          milliseconds: 1000
+      - name: get output
+        run: |
+          echo "The time was ${{ steps.gpt-analyse.outputs.time }}"
