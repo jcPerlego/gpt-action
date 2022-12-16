@@ -7,6 +7,7 @@ async function run(): Promise<void> {
     const nameToGreet: string = core.getInput('who-to-greet')
     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
     console.log(`HELLO ${nameToGreet}`)
+    console.log('LYF')
     core.debug(new Date().toTimeString())
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
