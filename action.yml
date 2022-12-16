@@ -6,6 +6,10 @@ inputs:
     required: true
     description: 'input description here'
     default: 'default value if applicable'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'JESSY'
 runs:
   using: 'node16'
   main: 'dist/index.js'

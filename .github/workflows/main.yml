@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: gpt analyse step
-        uses: jcPerlego/gpt-action@v2
+        uses: jcPerlego/gpt-action@v1
         id: gpt-analyse
         with:
           who-to-greet: 'Joey Leeds'
